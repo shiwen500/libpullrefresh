@@ -338,13 +338,32 @@ public class PullToRefreshLinearLayout extends LinearLayout implements PullToRef
 
                 mLoadingView.loadedTime("上次刷新:" + last);
 
+                if (!isDownToRefreshEnable()) {
+                    return false;
+                }
+
                 return true;
             } else if (mRefreshView.readyForDownToRefresh() && deltaY < 0 && getScrollY() < 0) { // 下拉后 又上滑
 
+                if (!isDownToRefreshEnable()) {
+                    return false;
+                }
+
                 return true;
             } else if (mRefreshView.readyForUpToLoad() && deltaY < 0) { // 上拉加载
+
+
+                if (!isUpToLoadEnable()) {
+                    return false;
+                }
+
                 return true;
             } else if (mRefreshView.readyForUpToLoad() && deltaY > 0 && getScrollY() > 0) { // 上拉后，下滑
+
+                if (!isUpToLoadEnable()) {
+                    return false;
+                }
+
                 return true;
             } else {
                 return false;
