@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:background="@drawable/bg_progress"
+        android:layout_width="80dp"
+        android:layout_height="80dp">
+        <www.seven.com.libpullrefresh.views.CustomLoadingView
+            android:id="@+id/progress"
+            android:layout_width="60dp"
+            android:layout_height="60dp">
+
+
+        </www.seven.com.libpullrefresh.views.CustomLoadingView>
+        <TextView
+            android:layout_gravity="center"
+            android:text="三云"
+            android:textSize="15sp"
+            android:shadowColor="#898989"
+            android:textColor="#2233ee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+</FrameLayout>
